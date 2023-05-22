@@ -20,4 +20,5 @@ char *get_path(char **env)
 		return (NULL);
 	full_path = _strcpy(full_path, Path);
 	return (full_path);
+	(void)env;
 }
