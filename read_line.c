@@ -7,7 +7,7 @@ char *read_line(void)
 {
 	char *buff = NULL;
 	size_t len;
-	int  read;
+	size_t  read;
 
 	read = getline(&buff, &len, stdin);
 	if (read == -1)
@@ -21,6 +21,7 @@ char *read_line(void)
 		free(buff);
 		exit(EXIT_FAILURE);
 	}
+	history++;
 	if (buff[0] == '\0')
 	{
 		free(buff);
