@@ -13,7 +13,7 @@ int tokens_count(char *str, char *delim)
 	int tokens = 0, len, index = 0;
 
 	len = _strlen(str);
-	for (index ; index < len ; index++)
+	for (; index < len ; index++)
 	{
 		if (str[index] == *delim)
 		{
@@ -100,7 +100,7 @@ char **allocate_string_array(size_t n)
 
 	if (array == NULL)
 		return (NULL);
-	for (i ; i < n ; i++)
+	for (; i < n ; i++)
 		array[i] = NULL;
 	return (array);
 }
