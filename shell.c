@@ -1,12 +1,20 @@
 #include "shell.h"
 
+/**
+ * main - our own shell entry point
+ * @argc: number of arguments passed
+ * @argv: array of strings with commands+arguments
+ * @env: env variables
+ *
+ * Return: 0
+ */
+
 int main(int argc, char *argv[], char **env)
 {
-	pid_t my_pid;
 	char *buff = NULL;
 	char **tokens;
 	void (*funptr)(int, char **);
-	int exit_status = 0, i = 0;
+	int exit_status = 0;
 
 	history = 1;
 	while (1)
