@@ -21,7 +21,7 @@ void handle_env(int status, char **env)
 {
 	int x = 0;
 
-	for (x ; env[x] ; x++)
+	for (; env[x] ; x++)
 	{
 		write(STDOUT_FILENO, env[x], _strlen(env[x]));
 		write(STDOUT_FILENO, "\n", 1);
