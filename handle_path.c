@@ -5,6 +5,7 @@ paths handle_path(char **env, char **tokens_args)
 	char *full_path = get_path(env), *temp, *old_path_token = NULL;
 	int count = tokens_count(full_path, ":"), i;
 	char **path_tokens = token_line(full_path, ":"), **extra_path;
+	paths current_paths;
 
 	extra_path = malloc((count + 1) * sizeof(char *));
 	for (i = 0 ; i < count ; i++)
@@ -18,8 +19,6 @@ paths handle_path(char **env, char **tokens_args)
 	}
 	extra_path[count] = malloc(_strlen(tokens_args[0]) + 1);
 	_strcpy(extra_path[count], tokens_args[0]);
-	paths current_paths;
-
 	current_paths.my_paths = extra_path;
 	current_paths.size = count + 1;
 	return (current_paths);
