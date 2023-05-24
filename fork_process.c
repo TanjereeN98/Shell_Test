@@ -35,6 +35,6 @@ void fork_process(char **args, char **argv, char **env)
 	}
 	flag = access(current_paths.my_paths[i - 1], X_OK) != 0;
 	if (i == current_paths.size && flag)
-		perror(argv[0]);
+		perror("./shell");
 	qol_free(current_paths.my_paths, current_paths.size);
 }
